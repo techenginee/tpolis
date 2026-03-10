@@ -180,7 +180,7 @@
                         entity: Tehnopolis Mashinobuduvannya Ltd </div>
                 </div>
                 <div class="col-auto ms-auto">
-                    <span class="link-light small fw-semibold small">Contact us at <a href="mailto:technopolis.eng@gmail.com">technopolis.eng@gmail.com</a></span>
+                    <span class="link-light small fw-semibold small">Contact us at <a id="emailLink"></a></span>
                 </div>
             </div>
         </div>
@@ -188,6 +188,15 @@
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
+    <script>
+        const user = "info";
+        const domain = "technopolis.org.ua";
+        const email = user + "@" + domain;
+        
+        const link = document.getElementById("emailLink");
+        link.href = "mailto:" + email;
+        link.textContent = email;
+    </script>
     <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
